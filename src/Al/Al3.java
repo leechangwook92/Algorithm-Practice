@@ -12,14 +12,17 @@ public class Al3 {
 
     }
 
+//    public int[] solution(long n) {
+//        String[] arr = String.valueOf(n).split("");
+//        int[] answer = new int[arr.length];
+//
+//        for(int i=0, j=answer.length-1; i<answer.length; i++, j--) {
+//            answer[i] = Integer.valueOf(arr[j]);
+//        }
+//        return answer;
+//    }
     public int[] solution(long n) {
-        String[] arr = String.valueOf(n).split("");
-        int[] answer = new int[arr.length];
-
-        for(int i=0, j=answer.length-1; i<answer.length; i++, j--) {
-            answer[i] = Integer.valueOf(arr[j]);
-        }
-        return answer;
+        return new StringBuilder().append(n).reverse().chars().map(Character::getNumericValue).toArray();
     }
 
 }
