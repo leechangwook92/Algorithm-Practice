@@ -1,11 +1,7 @@
 package Al;
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
-
 public class Al6 {
-    public static void main(String[] args) throws ScriptException {
+    public static void main(String[] args) {
         Al6 a1 = new Al6();
         int[] arr = {4, 5, 6, 7, 8, 9, 10, 11, 12};
 
