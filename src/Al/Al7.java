@@ -28,5 +28,4 @@ public class Al7 {
         return answer;
     }
 
-    // return Arrays.stream(numList).filter(value -> value % n == 0).toArray();
 }
