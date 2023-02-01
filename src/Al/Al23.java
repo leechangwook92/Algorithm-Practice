@@ -28,15 +28,31 @@ public class Al23 {
 
     public int solution(String s, char c) {
         int answer = 0;
-        String s1 = s.toLowerCase();
-        String s2 = String.valueOf(c).toLowerCase();
-        String[] split = s1.split("");
+//        String s1 = s.toLowerCase();
+//        String s2 = String.valueOf(c).toLowerCase();
+        s = s.toLowerCase();
+        c = Character.toLowerCase(c);
 
-        for (int i = 0; i < split.length; i++) {
-            if(s2.equals(split[i])) {
-                answer++;
+//        String[] split = s.split("");
+//
+//        for (int i = 0; i < split.length; i++) {
+//            if(String.valueOf(c).equals(split[i])) {
+//                answer++;
+//            }
+//        }
+
+        // toCharArray() 문자열을 배열로 만든다 == String[] split = s.split(""); 해줄 필요가 없음
+        for(char x : s.toCharArray()){
+            if(c==x) {
+                answer ++;
             }
         }
+
+//        for (String value : split) {
+//            if (String.valueOf(c).equals(value)) {
+//                answer++;
+//            }
+//        }
         return answer;
     }
 
