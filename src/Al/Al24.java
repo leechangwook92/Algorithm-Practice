@@ -22,7 +22,7 @@ public class Al24 {
         StringBuilder answer = new StringBuilder();
 
 //        for (char c : s.toCharArray()) {
-//            if(c >= 95) {
+//            if(c >= 97) {
 //                answer.append(Character.toUpperCase(c));
 //            } else {
 //                answer.append(Character.toLowerCase(c));
