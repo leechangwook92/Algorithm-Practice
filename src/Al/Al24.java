@@ -21,11 +21,21 @@ public class Al24 {
     public String solution(String s) {
         StringBuilder answer = new StringBuilder();
 
-        for (char c : s.toCharArray()) {
-            if(c >= 95) {
-                answer.append(Character.toUpperCase(c));
+//        for (char c : s.toCharArray()) {
+//            if(c >= 95) {
+//                answer.append(Character.toUpperCase(c));
+//            } else {
+//                answer.append(Character.toLowerCase(c));
+//            }
+//        }
+        // 아스키코드방식
+
+        // Character의 isLowerCase 소문자인지 확인하는 메소드를 사용해 참이면 대문자로 변환 거짓이면 else문을 타니 그 반대
+        for (char x : s.toCharArray()) {
+            if(Character.isLowerCase(x)) {
+                answer.append(Character.toUpperCase(x));
             } else {
-                answer.append(Character.toLowerCase(c));
+                answer.append(Character.toLowerCase(x));
             }
         }
 
