@@ -24,4 +24,19 @@ public class Al38 {
         return answer;
     }
 
+    public String solution2(String my_string) {
+        String answer = "";
+
+        for(char x : my_string.toCharArray()){
+            if(x >= 65 && 90 >= x ) {
+                x  = (char) (x+32);
+                answer += x;
+            } else {
+                x  = (char) (x-32);
+                answer += x;
+            }
+        }
+        return answer;
+    }
+
 }
