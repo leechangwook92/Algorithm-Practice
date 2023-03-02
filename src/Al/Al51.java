@@ -9,7 +9,7 @@ public class Al51 {
 
         Al51 a = new Al51();
 
-        System.out.println(a.solution(3, 2));
+        System.out.println(a.solution2(5, 3));
 
     }
 
@@ -20,6 +20,36 @@ public class Al51 {
     public static int combination(int balls, int share) {
         if (balls == share || share == 0) return 1;
         return combination((balls - 1), (share - 1)) + combination(balls - 1, share);
+    }
+
+    public int solution2(int balls, int share) {
+
+        int answer;
+
+        int left = 1;
+        int right = 1;
+        int up = 1;
+
+        if(balls == share) {
+            return 1;
+        }
+
+        for(int i = 1; i <= balls-share; i++) {
+            left *= i;
+        }
+
+        for(int i = 1; i <= share; i++) {
+            right *= i;
+        }
+
+        for(int i = 1; i <= balls; i++) {
+            up *= i;
+        }
+
+        answer = up / (left*right);
+
+        return answer;
+
     }
 
 
