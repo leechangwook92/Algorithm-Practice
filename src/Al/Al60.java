@@ -21,13 +21,12 @@ public class Al60 {
 
         List<Integer> arr = new ArrayList<>();
 
-        String replaceStr = my_string.replace("[a-z]", "");
-        for (String str : replaceStr.split("")) {
-            try{
-                arr.add(Integer.parseInt(str));
-            } catch (NumberFormatException nfe) {
-                nfe.printStackTrace();
-            }
+        my_string = my_string.replaceAll("[a-z,A-Z]","");
+
+        String[] split = my_string.split("");
+
+        for (String str : split) {
+            arr.add(Integer.parseInt(str));
         }
 
         Collections.sort(arr);
