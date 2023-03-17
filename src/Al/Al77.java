@@ -27,9 +27,7 @@ public class Al77 {
                     s = new StringBuilder();
                     break;
                 }
-                if (index == split.length) {
-                    answer[i] = s.toString();
-                }
+
                 s.append(split[index]);
                 index++;
                 answer[i] = s.toString();
